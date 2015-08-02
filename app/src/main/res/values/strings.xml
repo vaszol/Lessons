@@ -11,4 +11,6 @@
     <string name="bold">Bold</string>
     <string name="italic">Italic</string>
     <string name="showHide">Show text?</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
 </resources>

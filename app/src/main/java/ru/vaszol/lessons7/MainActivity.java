@@ -14,74 +14,32 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 
-public class MainActivity extends ActionBarActivity implements CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends ActionBarActivity implements  CompoundButton.OnCheckedChangeListener{
 
-    RadioGroup radioGroup;
-    TextView textView;
-    CheckBox checkBoxBold, checkBoxItalic;
-    Switch showText;
+   ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        textView = (TextView) findViewById(R.id.textView);
+        toggleButton=(ToggleButton)findViewById(R.id.toggleButton);
+        toggleButton.setOnCheckedChangeListener(this);
 
-        checkBoxBold = (CheckBox) findViewById(R.id.bold);
-        checkBoxItalic = (CheckBox) findViewById(R.id.italic);
-        showText=(Switch) findViewById(R.id.showText);
-
-        showText.setOnCheckedChangeListener(this);
-
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.radioButtonRedColor:
-                        textView.setTextColor(Color.RED);
-                        break;
-                    case R.id.radioButtonBlueColor:
-                        textView.setTextColor(Color.BLUE);
-                        break;
-                    case R.id.radioButtonDefaultColor:
-                        textView.setTextColor(Color.GRAY);
-                        break;
-                }
-            }
-        });
-    }
-        public void onCheckBoxChecked(View view){
-            boolean isChecked = ((CheckBox)view).isChecked();
-
-            switch (view.getId()){
-                case R.id.bold:
-                    if(isChecked){
-                        textView.setTypeface(null, Typeface.BOLD);
-                    }else {
-                        textView.setTypeface(null, Typeface.NORMAL);
-                    }
-                    break;
-                case R.id.italic:
-                    if(isChecked){
-                        textView.setTypeface(null, Typeface.ITALIC);
-                    }else {
-                        textView.setTypeface(null, Typeface.NORMAL);
-                    }
-                    break;
-            }
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked){
-            textView.setText(R.string.text);
-        }else {
-            textView.setText("");
+            Toast.makeText(getApplicationContext(),R.string.show,Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(),R.string.hide,Toast.LENGTH_LONG).show();
         }
+
     }
 }
 

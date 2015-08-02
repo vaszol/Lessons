@@ -1,76 +1,14 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_width="fill_parent">
-
-    <RadioGroup
-        android:layout_width="wrap_content"
+    android:orientation="vertical">
+    <ToggleButton
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radioButtonRedColor"
-            android:id="@+id/radioButtonRedColor"
-            android:textSize="20sp"
-            />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radioButtonBlueColor"
-            android:id="@+id/radioButtonBlueColor"
-            android:textSize="20sp"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radioButtonDefaultColor"
-            android:id="@+id/radioButtonDefaultColor"
-            android:textSize="20sp"
-            />
-    </RadioGroup>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bold"
-        android:text="@string/bold"
         android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/italic"
-        android:layout_alignStart="@+id/italic"
-        android:onClick="onCheckBoxChecked"
-        />
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/italic"
-        android:text="@string/italic"
-        android:textSize="20sp"
-        android:layout_below="@+id/bold"
-        android:layout_centerHorizontal="true"
-        android:onClick="onCheckBoxChecked"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:text="@string/text"
-        android:textSize="40sp"
-        android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true" />
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/showText"
-        android:text="@string/showHide"
-        android:textOn="Yes"
-        android:textSize="20sp"
+        android:textOn="@string/show"
+        android:textOff="@string/hide"
         android:checked="true"
-        android:textOff="No"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
-</RelativeLayout>
+        android:id="@+id/toggleButton"/>
+</LinearLayout>
