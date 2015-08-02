@@ -39,7 +39,9 @@
         android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/italic"
-        android:layout_alignStart="@+id/italic" />
+        android:layout_alignStart="@+id/italic"
+        android:onClick="onCheckBoxChecked"
+        />
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +49,9 @@
         android:text="@string/italic"
         android:textSize="20sp"
         android:layout_below="@+id/bold"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onCheckBoxChecked"
+        />
 
 
     <TextView
