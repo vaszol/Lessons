@@ -12,14 +12,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements CompoundButton.OnCheckedChangeListener {
 
     RadioGroup radioGroup;
     TextView textView;
     CheckBox checkBoxBold, checkBoxItalic;
+    Switch showText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,9 @@ public class MainActivity extends ActionBarActivity {
 
         checkBoxBold = (CheckBox) findViewById(R.id.bold);
         checkBoxItalic = (CheckBox) findViewById(R.id.italic);
+        showText=(Switch) findViewById(R.id.showText);
 
+        showText.setOnCheckedChangeListener(this);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -69,6 +73,15 @@ public class MainActivity extends ActionBarActivity {
                     }
                     break;
             }
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked){
+            textView.setText(R.string.text);
+        }else {
+            textView.setText("");
+        }
     }
 }
 

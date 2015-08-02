@@ -62,5 +62,15 @@
         android:textSize="40sp"
         android:layout_below="@+id/radioGroup"
         android:layout_centerHorizontal="true" />
-
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showText"
+        android:text="@string/showHide"
+        android:textOn="Yes"
+        android:textSize="20sp"
+        android:checked="true"
+        android:textOff="No"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
 </RelativeLayout>
