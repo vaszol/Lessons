@@ -8,4 +8,6 @@
     <string name="radioButtonRedColor">Red</string>
     <string name="radioButtonBlueColor">Blue</string>
     <string name="radioButtonDefaultColor">Default</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
 </resources>

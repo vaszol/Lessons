@@ -31,6 +31,25 @@
             />
     </RadioGroup>
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bold"
+        android:text="@string/bold"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/italic"
+        android:layout_alignStart="@+id/italic" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/italic"
+        android:text="@string/italic"
+        android:textSize="20sp"
+        android:layout_below="@+id/bold"
+        android:layout_centerHorizontal="true" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
