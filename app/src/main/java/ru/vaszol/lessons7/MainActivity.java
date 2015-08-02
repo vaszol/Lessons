@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -21,29 +22,15 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends ActionBarActivity {
 
-    ImageButton imageButton;
+   ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageButton=(ImageButton)findViewById(R.id.imageButton);
-
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imageButton.setImageResource(R.drawable.stop);
-            }
-        });
-
-        imageButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                imageButton.setImageResource(R.drawable.play);
-                return false;
-            }
-        });
+        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView.setImageResource(R.drawable.stop);
     }
 
 

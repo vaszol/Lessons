@@ -4,9 +4,9 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:src="@drawable/play"/>
+   <ImageView
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:src="@drawable/play"
+       android:id="@+id/imageView"/>
 </LinearLayout>
