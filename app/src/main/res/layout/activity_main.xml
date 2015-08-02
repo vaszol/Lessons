@@ -3,12 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-    <ToggleButton
+
+    <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textOn="@string/show"
-        android:textOff="@string/hide"
-        android:checked="true"
-        android:id="@+id/toggleButton"/>
+        android:id="@+id/imageButton"
+        android:src="@drawable/play"/>
 </LinearLayout>

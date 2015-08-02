@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -18,29 +19,34 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
-public class MainActivity extends ActionBarActivity implements  CompoundButton.OnCheckedChangeListener{
+public class MainActivity extends ActionBarActivity {
 
-   ToggleButton toggleButton;
+    ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toggleButton=(ToggleButton)findViewById(R.id.toggleButton);
-        toggleButton.setOnCheckedChangeListener(this);
+        imageButton=(ImageButton)findViewById(R.id.imageButton);
 
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageButton.setImageResource(R.drawable.stop);
+            }
+        });
+
+        imageButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                imageButton.setImageResource(R.drawable.play);
+                return false;
+            }
+        });
     }
 
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(isChecked){
-            Toast.makeText(getApplicationContext(),R.string.show,Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(getApplicationContext(),R.string.hide,Toast.LENGTH_LONG).show();
-        }
 
-    }
 }
 
 
