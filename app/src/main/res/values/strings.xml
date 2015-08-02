@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lessons 7</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="textRadioButton">Red</string>
+    <string name="text">Hello World</string>
+    <string name="radioButtonRedColor">Red</string>
+    <string name="radioButtonBlueColor">Blue</string>
+    <string name="radioButtonDefaultColor">Default</string>
+</resources>
